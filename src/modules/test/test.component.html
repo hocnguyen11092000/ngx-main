@@ -1,0 +1,15 @@
+<p>main test</p>
+<ng-portal-a
+  *axLazyElement="
+    LOAD_LINK_COMPONENT;
+    errorTemplate: errorTemplateRef;
+    loadingTemplate: loadingTemplateRef
+  "
+></ng-portal-a>
+
+<ng-template #errorTemplateRef>
+  something is wrong with path {{ LOAD_LINK_COMPONENT }}</ng-template
+>
+<ng-template #loadingTemplateRef>
+  <div class="loading">loading</div>
+</ng-template>
